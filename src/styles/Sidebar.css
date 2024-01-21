@@ -1,0 +1,15 @@
+:root {
+  --font-color: #161616;
+}
+
+.header {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--font-color);
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.5rem;
+  color: var(--font-color);
+}

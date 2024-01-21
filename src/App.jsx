@@ -1,8 +1,12 @@
+import Sidebar from "./components/Sidebar/Sidebar.jsx";
+import Preview from "./components/Preview/Preview.jsx";
+
 function App() {
   return (
-    <>
-      <h1>Hello World!</h1>
-    </>
+    <div id="App">
+      <Sidebar />
+      <Preview />
+    </div>
   );
 }
 
