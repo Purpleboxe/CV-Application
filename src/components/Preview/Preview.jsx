@@ -1,9 +1,15 @@
 import "../../styles/Preview.css";
 
-function Preview() {
+import GeneralInformationView from "./GeneralInformationView";
+
+function Preview(props) {
+  const { data } = props;
+
   return (
     <div className="Preview">
-      <div className="Resume"></div>
+      <div className="Resume">
+        <GeneralInformationView data={data.GeneralInformation} />
+      </div>
     </div>
   );
 }

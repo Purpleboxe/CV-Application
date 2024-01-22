@@ -1,5 +1,10 @@
 :root {
   --font-color: #161616;
+  --box-shadow: rgb(230, 230, 230);
+}
+
+.generalInformation {
+  box-shadow: 10px 10px 10px var(--box-shadow);
 }
 
 .header {
@@ -12,4 +17,56 @@
 .description {
   font-size: 1.5rem;
   color: var(--font-color);
+}
+
+form {
+  color: var(--font-color);
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.formHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.formHeader img {
+  width: 40px;
+}
+
+.fieldset {
+  border-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldset label {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.fieldset span {
+  margin-bottom: 5px;
+}
+
+.formInput {
+  border-radius: 10px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: solid 2px transparent;
+  background-color: whitesmoke;
+  transition: 0.1s;
+}
+
+.formInput:focus {
+  border-color: #4e524e;
+  box-shadow: 2px 2px 10px var(--box-shadow);
+  outline: none;
 }

@@ -1,5 +1,17 @@
 .Resume {
+  display: grid;
+  grid-template-rows: auto 1fr;
   width: 600px;
   height: 860px;
   background-color: white;
+}
+
+.GeneralInformationView {
+  color: white;
+  background-color: #13262f;
+  text-align: center;
+}
+
+.GeneralInformationView h1 {
+  font-size: 2rem;
 }
