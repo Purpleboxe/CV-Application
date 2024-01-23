@@ -41,6 +41,7 @@ form {
   border-style: none;
   display: flex;
   flex-direction: column;
+  padding: 1rem 3rem;
 }
 
 .fieldset label {
@@ -57,7 +58,7 @@ form {
 }
 
 .formInput {
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 0.8rem;
   font-size: 1rem;
   border: solid 2px transparent;

@@ -23,6 +23,42 @@ function GeneralInformation(props) {
             required
           />
         </label>
+        <label>
+          <span>Email</span>
+          <input
+            type="email"
+            name="email"
+            className="formInput"
+            placeholder="Enter email"
+            onChange={change}
+            maxLength={80}
+            required
+          />
+        </label>
+        <label>
+          <span>Phone Number</span>
+          <input
+            type="tel"
+            name="phoneNumber"
+            className="formInput"
+            placeholder="Enter phone number"
+            onChange={change}
+            maxLength={15}
+            required
+          />
+        </label>
+        <label>
+          <span>Location</span>
+          <input
+            type="text"
+            name="location"
+            className="formInput"
+            placeholder="Enter location"
+            onChange={change}
+            maxLength={30}
+            required
+          />
+        </label>
       </fieldset>
     </form>
   );

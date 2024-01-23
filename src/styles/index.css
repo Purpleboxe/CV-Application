@@ -22,6 +22,7 @@ body {
   background-color: whitesmoke;
   padding: 2rem;
   text-align: center;
+  overflow-y: auto;
 }
 
 .Preview {

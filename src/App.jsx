@@ -7,6 +7,9 @@ function App() {
   const [data, setData] = useState({
     GeneralInformation: {
       fullName: "",
+      email: "",
+      phoneNumber: "",
+      location: "",
     },
   });
 
@@ -24,10 +27,7 @@ function App() {
 
   return (
     <div id="App">
-      <Sidebar
-        data={data}
-        generalInformationChange={generalInformationChange}
-      />
+      <Sidebar generalInformationChange={generalInformationChange} />
       <Preview data={data} />
     </div>
   );

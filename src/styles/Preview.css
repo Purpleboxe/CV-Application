@@ -1,8 +1,8 @@
 .Resume {
   display: grid;
   grid-template-rows: auto 1fr;
-  width: 600px;
-  height: 860px;
+  width: 700px;
+  height: 900px;
   background-color: white;
 }
 
@@ -10,8 +10,29 @@
   color: white;
   background-color: #13262f;
   text-align: center;
+  padding: 10px;
+  font-weight: bold;
 }
 
 .GeneralInformationView h1 {
   font-size: 2rem;
+}
+
+.GeneralInformationView img {
+  width: 25px;
+  filter: brightness(0) invert(1);
+}
+
+.contactInformation {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contactInformation div {
+  display: flex;
+  align-items: center;
+}
+
+.contactInformation img {
+  margin-right: 2px;
 }
