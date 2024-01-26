@@ -27,7 +27,10 @@ function App() {
 
   return (
     <div id="App">
-      <Sidebar generalInformationChange={generalInformationChange} />
+      <Sidebar
+        generalInformationChange={generalInformationChange}
+        data={data}
+      />
       <Preview data={data} />
     </div>
   );

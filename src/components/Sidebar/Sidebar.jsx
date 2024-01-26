@@ -3,7 +3,7 @@ import "../../styles/Sidebar.css";
 import GeneralInformation from "./GeneralInformation.jsx";
 
 function Sidebar(props) {
-  const { generalInformationChange } = props;
+  const { generalInformationChange, data } = props;
 
   return (
     <div className="Sidebar">
@@ -12,7 +12,7 @@ function Sidebar(props) {
         Create and customize your resume effortlessly with this CV Application!
       </div>
 
-      <GeneralInformation change={generalInformationChange} />
+      <GeneralInformation change={generalInformationChange} data={data} />
     </div>
   );
 }

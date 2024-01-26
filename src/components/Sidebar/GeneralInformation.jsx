@@ -1,7 +1,7 @@
 import accountSvg from "../../assets/account.svg";
 
 function GeneralInformation(props) {
-  const { change } = props;
+  const { change, data } = props;
 
   return (
     <form className="generalInformation">
@@ -20,6 +20,7 @@ function GeneralInformation(props) {
             placeholder="Enter full name"
             onChange={change}
             maxLength={25}
+            value={data.GeneralInformation.fullName}
             required
           />
         </label>
@@ -32,6 +33,7 @@ function GeneralInformation(props) {
             placeholder="Enter email"
             onChange={change}
             maxLength={80}
+            value={data.GeneralInformation.email}
             required
           />
         </label>
@@ -44,6 +46,7 @@ function GeneralInformation(props) {
             placeholder="Enter phone number"
             onChange={change}
             maxLength={15}
+            value={data.GeneralInformation.phoneNumber}
             required
           />
         </label>
@@ -56,6 +59,7 @@ function GeneralInformation(props) {
             placeholder="Enter location"
             onChange={change}
             maxLength={30}
+            value={data.GeneralInformation.location}
             required
           />
         </label>

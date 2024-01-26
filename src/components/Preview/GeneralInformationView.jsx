@@ -10,16 +10,31 @@ function GeneralInformationView(props) {
       <h1>{data.fullName}</h1>
       <div className="contactInformation">
         <div>
-          <img src={emailSvg} alt="email" />
-          {data.email}
+          {data.email === "" ? (
+            ""
+          ) : (
+            <>
+              <img src={emailSvg} alt="email" /> {data.email}
+            </>
+          )}
         </div>
         <div>
-          <img src={phoneSvg} alt="phone" />
-          {data.phoneNumber}
+          {data.phoneNumber === "" ? (
+            ""
+          ) : (
+            <>
+              <img src={phoneSvg} alt="phone" /> {data.phoneNumber}
+            </>
+          )}
         </div>
         <div>
-          <img src={locationSvg} alt="location" />
-          {data.location}
+          {data.location === "" ? (
+            ""
+          ) : (
+            <>
+              <img src={locationSvg} alt="location" /> {data.location}
+            </>
+          )}
         </div>
       </div>
     </section>
