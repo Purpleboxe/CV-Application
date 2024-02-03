@@ -2,34 +2,36 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #e9ecef;
 }
 
 #root {
-  display: grid;
   min-height: 100vh;
   width: 100vw;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 #App {
   display: flex;
   flex-flow: row;
+  place-self: center;
 }
 
 .Sidebar {
   position: relative;
-  max-height: 100vh;
-  max-width: 30%;
-  background-color: whitesmoke;
+  height: 100vh;
+  max-width: 30vw;
   padding: 2rem;
   text-align: center;
-  overflow-y: auto;
 }
 
 .Preview {
   position: relative;
   display: flex;
   flex: 1;
-  background-color: rgb(216, 216, 216);
   justify-content: center;
   align-items: center;
+  width: 100%;
 }

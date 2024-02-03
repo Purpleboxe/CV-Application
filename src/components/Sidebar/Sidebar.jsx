@@ -1,9 +1,15 @@
 import "../../styles/Sidebar.css";
 
 import GeneralInformation from "./GeneralInformation.jsx";
+import EducationalExperience from "./EducationalExperience.jsx";
 
 function Sidebar(props) {
-  const { generalInformationChange, data } = props;
+  const {
+    generalInformationChange,
+    submitInformation,
+    deleteInformation,
+    data,
+  } = props;
 
   return (
     <div className="Sidebar">
@@ -13,6 +19,11 @@ function Sidebar(props) {
       </div>
 
       <GeneralInformation change={generalInformationChange} data={data} />
+      <EducationalExperience
+        change={submitInformation}
+        deleteInfo={deleteInformation}
+        data={data.EducationalExperience}
+      />
     </div>
   );
 }

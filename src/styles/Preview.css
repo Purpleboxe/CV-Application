@@ -8,7 +8,7 @@
 
 .GeneralInformationView {
   color: white;
-  background-color: #13262f;
+  background-color: #1d3461;
   text-align: center;
   padding: 10px;
   font-weight: bold;
@@ -35,4 +35,22 @@
 
 .contactInformation img {
   margin-right: 2px;
+}
+
+.preview-header {
+  background-color: whitesmoke;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+.educInfo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.schoolInfo {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
