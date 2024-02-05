@@ -129,8 +129,14 @@ form {
   padding: 10px 20px;
   box-shadow: 1px 1px 5px var(--box-shadow);
   width: 85%;
-  margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.schoolText {
+  display: flex;
+  align-items: start;
+  width: 70%;
+  overflow: hidden;
 }
 
 .btn-icon {
@@ -139,4 +145,5 @@ form {
   cursor: pointer;
   font-size: 20px;
   color: gray;
+  margin-left: 5px;
 }

@@ -2,14 +2,29 @@ import { useState } from "react";
 import schoolSvg from "../../assets/school.svg";
 
 function EducationalExperience(props) {
-  const { change, deleteInfo, data } = props;
+  const { change, deleteInfo, editInfo, data } = props;
 
   const [isFormOpen, setFormOpen] = useState(false);
+  const [editItemId, setEditItemId] = useState(null);
+
+  const currentEditItem = (id) => {
+    return data.find((i) => i.id === id);
+  };
 
   const school = data.map((i) => (
     <div className="school" key={i.id}>
-      <div>{i.school}</div>
+      <div className="schoolText">{i.school}</div>
       <div className="btns">
+        <button
+          className="btn-icon"
+          onClick={(e) => {
+            e.preventDefault();
+            setFormOpen(true);
+            setEditItemId(i.id);
+          }}
+        >
+          <i className="fa-solid fa-pen-to-square"></i>
+        </button>
         <button
           className="btn-icon"
           onClick={(e) => {
@@ -25,12 +40,18 @@ function EducationalExperience(props) {
 
   const submit = (e) => {
     e.preventDefault();
-    change(e, "EducationalExperience");
+    if (editItemId === null) {
+      change(e, "EducationalExperience");
+    } else if (editItemId !== null) {
+      editInfo(e, editItemId, "EducationalExperience");
+    }
     setFormOpen(false);
+    setEditItemId(null);
   };
 
   const openForm = () => {
     setFormOpen(true);
+    setEditItemId(null);
   };
 
   return (
@@ -51,6 +72,7 @@ function EducationalExperience(props) {
                   className="formInput"
                   placeholder="Enter school"
                   maxLength={50}
+                  defaultValue={currentEditItem(editItemId)?.school}
                   required
                 />
               </label>

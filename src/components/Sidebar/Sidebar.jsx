@@ -8,6 +8,7 @@ function Sidebar(props) {
     generalInformationChange,
     submitInformation,
     deleteInformation,
+    editInformation,
     data,
   } = props;
 
@@ -22,6 +23,7 @@ function Sidebar(props) {
       <EducationalExperience
         change={submitInformation}
         deleteInfo={deleteInformation}
+        editInfo={editInformation}
         data={data.EducationalExperience}
       />
     </div>

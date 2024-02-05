@@ -59,12 +59,37 @@ function App() {
     }));
   };
 
+  const editInformation = (e, id, type) => {
+    e.preventDefault();
+
+    const fieldset = e.target.closest("form");
+
+    const updatedData = data[type].map((item) => {
+      if (item.id === id) {
+        return {
+          ...item,
+          ...[...fieldset.querySelectorAll("input")].reduce((obj, field) => {
+            obj[field.name] = field.value;
+            return obj;
+          }, {}),
+        };
+      }
+      return item;
+    });
+
+    setData((prev) => ({
+      ...prev,
+      [type]: updatedData,
+    }));
+  };
+
   return (
     <div id="App">
       <Sidebar
         generalInformationChange={generalInformationChange}
         submitInformation={submitInformation}
         deleteInformation={deleteInformation}
+        editInformation={editInformation}
         data={data}
       />
       <Preview data={data} />
