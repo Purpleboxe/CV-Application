@@ -2,6 +2,7 @@ import "../../styles/Sidebar.css";
 
 import GeneralInformation from "./GeneralInformation.jsx";
 import EducationalExperience from "./EducationalExperience.jsx";
+import WorkExperience from "./WorkExperience.jsx";
 
 function Sidebar(props) {
   const {
@@ -25,6 +26,12 @@ function Sidebar(props) {
         deleteInfo={deleteInformation}
         editInfo={editInformation}
         data={data.EducationalExperience}
+      />
+      <WorkExperience
+        change={submitInformation}
+        deleteInfo={deleteInformation}
+        editInfo={editInformation}
+        data={data.WorkExperience}
       />
     </div>
   );

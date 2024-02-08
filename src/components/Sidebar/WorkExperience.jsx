@@ -1,7 +1,7 @@
 import { useState } from "react";
-import schoolSvg from "../../assets/school.svg";
+import briefcaseSvg from "../../assets/briefcase.svg";
 
-function EducationalExperience(props) {
+function WorkExperience(props) {
   const { change, deleteInfo, editInfo, data } = props;
 
   const [isFormOpen, setFormOpen] = useState(false);
@@ -11,9 +11,9 @@ function EducationalExperience(props) {
     return data.find((i) => i.id === id);
   };
 
-  const school = data.map((i) => (
-    <div className="school info" key={i.id}>
-      <div className="schoolText infoText">{i.school}</div>
+  const company = data.map((i) => (
+    <div className="company info" key={i.id}>
+      <div className="companyText infoText">{i.company}</div>
       <div className="btns">
         <button
           className="btn-icon"
@@ -29,7 +29,7 @@ function EducationalExperience(props) {
           className="btn-icon"
           onClick={(e) => {
             e.preventDefault();
-            deleteInfo(i.id, "EducationalExperience");
+            deleteInfo(i.id, "WorkExperience");
           }}
         >
           <i className="fa-solid fa-trash"></i>
@@ -41,9 +41,9 @@ function EducationalExperience(props) {
   const submit = (e) => {
     e.preventDefault();
     if (editItemId === null) {
-      change(e, "EducationalExperience");
+      change(e, "WorkExperience");
     } else if (editItemId !== null) {
-      editInfo(e, editItemId, "EducationalExperience");
+      editInfo(e, editItemId, "WorkExperience");
     }
     setFormOpen(false);
     setEditItemId(null);
@@ -55,36 +55,36 @@ function EducationalExperience(props) {
   };
 
   return (
-    <form className="educationalExperience">
+    <form className="workExperience">
       <div className="formHeader">
-        <img src={schoolSvg} alt="Education" />
-        <h2>Educational Experience</h2>
+        <img src={briefcaseSvg} alt="Work" />
+        <h2>Work Experience</h2>
       </div>
-      <div className="educationalInformation experience">
+      <div className="workInformation experience">
         {isFormOpen ? (
           <div>
             <fieldset className="fieldset">
               <label>
-                <span>School</span>
+                <span>Company Name</span>
                 <input
                   type="text"
-                  name="school"
+                  name="company"
                   className="formInput"
-                  placeholder="Enter school"
+                  placeholder="Enter company name"
                   maxLength={50}
-                  defaultValue={currentEditItem(editItemId)?.school}
+                  defaultValue={currentEditItem(editItemId)?.company}
                   required
                 />
               </label>
               <label>
-                <span>Degree</span>
+                <span>Position</span>
                 <input
                   type="text"
-                  name="degree"
+                  name="position"
                   className="formInput"
-                  placeholder="Enter degree"
+                  placeholder="Enter position name"
                   maxLength={50}
-                  defaultValue={currentEditItem(editItemId)?.degree}
+                  defaultValue={currentEditItem(editItemId)?.position}
                   required
                 />
               </label>
@@ -138,15 +138,16 @@ function EducationalExperience(props) {
           </div>
         ) : (
           <>
-            <div className="schools information">{school}</div>
+            <div className="companies information">{company}</div>
             <button className="btn" onClick={openForm}>
               Add +
             </button>
           </>
         )}
+        <div></div>
       </div>
     </form>
   );
 }
 
-export default EducationalExperience;
+export default WorkExperience;

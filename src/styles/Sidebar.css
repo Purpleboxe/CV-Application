@@ -6,14 +6,14 @@
 }
 
 .header {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
   color: var(--font-color);
   margin-bottom: 20px;
 }
 
 .description {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--font-color);
 }
 
@@ -21,19 +21,20 @@ form {
   color: var(--font-color);
   background-color: white;
   border-radius: 10px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   box-shadow: 10px 10px 10px var(--box-shadow);
 }
 
 .formHeader {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
+  margin-left: 20px;
 }
 
 .formHeader img {
-  width: 35px;
+  width: 30px;
   margin-right: 10px;
 }
 
@@ -41,25 +42,32 @@ form {
   border-style: none;
   display: flex;
   flex-direction: column;
+  padding: 1rem 2rem;
 }
 
 .fieldset label {
   display: flex;
   text-align: left;
   flex-direction: column;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .fieldset span {
   margin-bottom: 5px;
 }
 
+.dates {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
 .formInput {
   border-radius: 15px;
   padding: 0.8rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   border: solid 2px transparent;
   background-color: whitesmoke;
   transition: 0.1s;
@@ -71,7 +79,7 @@ form {
   outline: none;
 }
 
-.educationalInformation {
+.experience {
   display: flex;
   flex-direction: column;
 }
@@ -111,13 +119,13 @@ form {
   margin: 10px 20px;
 }
 
-.schools {
+.information {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.school {
+.info {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -127,12 +135,11 @@ form {
   border: solid 3px var(--off-white);
   border-radius: 10px;
   padding: 10px 20px;
-  box-shadow: 1px 1px 5px var(--box-shadow);
   width: 85%;
   margin-bottom: 10px;
 }
 
-.schoolText {
+.infoText {
   display: flex;
   align-items: start;
   width: 70%;

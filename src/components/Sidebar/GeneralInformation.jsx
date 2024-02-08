@@ -7,7 +7,7 @@ function GeneralInformation(props) {
     <form className="generalInformation">
       <div className="formHeader">
         <img src={accountSvg} alt="General" />
-        <h1>General Information</h1>
+        <h2>General Information</h2>
       </div>
 
       <fieldset className="fieldset">

@@ -13,6 +13,7 @@ function App() {
       location: "",
     },
     EducationalExperience: [],
+    WorkExperience: [],
   });
 
   const generalInformationChange = (e) => {

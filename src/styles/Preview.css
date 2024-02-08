@@ -1,6 +1,6 @@
 .Resume {
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto 1fr 5fr;
   width: 700px;
   height: 900px;
   background-color: white;
@@ -37,6 +37,10 @@
   margin-right: 2px;
 }
 
+section {
+  padding: 0 50px;
+}
+
 .preview-header {
   background-color: whitesmoke;
   text-align: center;
@@ -44,13 +48,34 @@
   padding: 10px;
 }
 
-.educInfo {
+.preview-info {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  padding: 0 50px;
+}
+
+.view {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2rem;
+}
+
+.dates-preview {
+  margin-right: 30px;
+  text-align: left;
+}
+
+.info-preview {
+  margin-bottom: 12px;
+  display: flex;
   flex-direction: column;
 }
 
-.schoolInfo {
-  font-size: 1.2rem;
+.name {
   font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.location {
+  margin-top: 2px;
 }
