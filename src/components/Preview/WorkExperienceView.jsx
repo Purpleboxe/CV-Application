@@ -10,6 +10,7 @@ function WorkExperience(props) {
       <div className="workInfo info-preview">
         <div className="workName name">{i.company}</div>
         <div className="workPosition">{i.position}</div>
+        <div className="workDescription">{i.description}</div>
       </div>
     </div>
   ));

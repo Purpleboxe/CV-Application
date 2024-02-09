@@ -1,7 +1,3 @@
-import emailSvg from "../../assets/email.svg";
-import phoneSvg from "../../assets/phone.svg";
-import locationSvg from "../../assets/map-marker.svg";
-
 function GeneralInformationView(props) {
   const { data } = props;
 
@@ -14,7 +10,8 @@ function GeneralInformationView(props) {
             ""
           ) : (
             <>
-              <img src={emailSvg} alt="email" /> {data.email}
+              <i className="fa-regular fa-envelope"></i>
+              {data.email}
             </>
           )}
         </div>
@@ -23,7 +20,8 @@ function GeneralInformationView(props) {
             ""
           ) : (
             <>
-              <img src={phoneSvg} alt="phone" /> {data.phoneNumber}
+              <i className="fa-solid fa-phone"></i>
+              {data.phoneNumber}
             </>
           )}
         </div>
@@ -32,7 +30,8 @@ function GeneralInformationView(props) {
             ""
           ) : (
             <>
-              <img src={locationSvg} alt="location" /> {data.location}
+              <i className="fa-solid fa-location-dot"></i>
+              {data.location}
             </>
           )}
         </div>

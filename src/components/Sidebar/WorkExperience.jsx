@@ -126,6 +126,18 @@ function WorkExperience(props) {
                   required
                 />
               </label>
+              <label>
+                <span>Description</span>
+                <textarea
+                  type="text"
+                  name="description"
+                  className="formInput"
+                  placeholder="Enter description"
+                  maxLength={150}
+                  defaultValue={currentEditItem(editItemId)?.description}
+                  required
+                />
+              </label>
             </fieldset>
             <div className="btns">
               <button className="btn" onClick={submit}>

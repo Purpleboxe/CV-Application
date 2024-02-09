@@ -1,10 +1,3 @@
-:root {
-  --font-color: #161616;
-  --box-shadow: rgb(230, 230, 230);
-  --outline: #4e524e;
-  --off-white: rgb(220, 220, 220);
-}
-
 .header {
   font-size: 2rem;
   font-weight: bold;

@@ -1,3 +1,10 @@
+:root {
+  --font-color: #161616;
+  --box-shadow: rgb(230, 230, 230);
+  --outline: #4e524e;
+  --off-white: rgb(220, 220, 220);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -16,7 +23,7 @@ body {
 #App {
   display: flex;
   flex-flow: row;
-  place-self: center;
+  justify-content: center;
 }
 
 .Sidebar {
@@ -29,9 +36,47 @@ body {
 
 .Preview {
   position: relative;
-  display: flex;
   flex: 1;
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+}
+
+.btn-container {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 60px;
+  margin-right: 150px;
+}
+
+.btn-settings {
+  padding: 1rem;
+  font-size: 2rem;
+  border: 2px solid transparent;
+  background-color: rgba(118, 177, 255, 0.7);
+  border-radius: 20px;
+  transition: border 0.05s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-settings:active {
+  border: 2px solid var(--outline);
+}
+
+@media only screen and (max-width: 1320px) {
+  #App {
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .Sidebar {
+    overflow-y: auto;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .Sidebar {
+    min-width: 50vw;
+  }
 }
