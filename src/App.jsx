@@ -111,7 +111,11 @@ function App() {
       />
       <Preview data={data} />
       <div className="btn-container">
-        <button className="btn-settings" onClick={handleDownload}>
+        <button
+          className="btn-settings"
+          onClick={handleDownload}
+          aria-label="Download"
+        >
           <i className="fa-solid fa-download"></i>
         </button>
       </div>
