@@ -36,6 +36,7 @@ form {
   display: flex;
   flex-direction: column;
   padding: 1rem 2rem;
+  max-width: 100%;
 }
 
 .fieldset label {
@@ -84,19 +85,24 @@ form {
   align-items: center;
   background-color: transparent;
   color: var(--font-color);
-  border: solid 3px var(--off-white);
+  border: solid 2px var(--off-white);
   border-radius: 10px;
   font-size: 1rem;
   padding: 10px;
   width: 20%;
   margin: 10px;
   margin-left: 20px;
+  transition: 0.08s ease-in-out;
   cursor: pointer;
 }
 
 .btn img {
   width: 20px;
   filter: grayscale(80%);
+}
+
+.btn:active {
+  border-color: #aaaaaa;
 }
 
 .btns {
@@ -146,4 +152,8 @@ form {
   font-size: 20px;
   color: gray;
   margin-left: 5px;
+}
+
+textarea {
+  resize: none;
 }
